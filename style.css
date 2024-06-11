@@ -1,0 +1,186 @@
+html{
+	height: 100vh;
+	overflow: hidden;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	list-style: none;
+	text-decoration: none;
+
+}
+header{
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 33px 9%;
+	background: black ;
+
+}
+
+
+.sub-menu-1
+{
+	display: none;
+}
+.logo{
+	font-size: 30px;
+	font-weight: 700;
+	color: #DBB337;
+}
+.center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px;
+            height: 2vh; /* Make the container take the full height of the viewport */
+        }
+
+        /* Text styles */
+        .center-text {
+            text-align: center;
+            font-size: 50px;
+            color: white;
+            padding-top: 780px;
+            /* Add more styles as needed */
+        }
+body{
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.navlist{
+	display: flex;
+}
+.navlist a{
+	color: white;
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	border-bottom: 2px solid transparent;
+	transition: all .55s ease;
+}
+.navlist a:hover{
+	color: yellow;
+}
+#menu-icon{
+	color: white;
+	font-size: 30px;
+	z-index: 10001;
+	cursor: pointer;
+}
+.back-video{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+	.back-video{
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media(max-aspect-ratio: 16/9){
+	.back-video{
+		width: auto;
+		height: 100%;
+	}
+}
+	
+.navlist :hover .sub-menu-1{
+	display: balck;
+	position: absolute;
+	background: white;
+	margin-top: 15px;
+	margin-left: -15px;
+
+}
+.navlist:hover .sub-menu-1{
+	display: block;
+	margin: 10px;
+}
+
+.section1, .section2{
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	transform-style: preserve-3d;
+}
+
+.section1::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url('video/mp4');
+	background-size: cover;
+	transform: translateZ(-1px) scale(2.2);
+	filter: blur(2px);
+}
+
+.section2{
+	background: black;
+
+}
+
+
+    .container{
+    	height: 100%;
+    	width: 100%;
+    	background: transparent;
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	position: relative;
+    	bottom: 40px;
+    }
+
+    .button{
+    	 border: 3px solid white;
+    	 height: 5%;
+    	 width: 10%;
+    	 border-radius: 20px;
+    	 margin-top: 30%;
+    	 display: flex;
+    	 flex-wrap: wrap;
+    	 justify-content: center;
+    	 font-weight: 50;
+    	 font-size: 10px;
+    	 color: black;
+    	 background: cyan;
+    	 box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    }
+
+    .button:hover{
+    	box-shadow: 0 0 5px cyan,
+    	0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px;
+    }
+
+a1,button1{
+	padding: 9px 25px;
+	background-color: green;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0%;
+
+a1,button1:hover{
+	background-color: rgba(0, 136, 169, 0.8);
+}
+
+
